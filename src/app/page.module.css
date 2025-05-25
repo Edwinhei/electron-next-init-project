@@ -1,0 +1,47 @@
+/* src/app/page.module.css */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center;   /* 水平居中 */
+    padding: 6rem;
+    min-height: 100vh;
+    background-color: #282c34; /* 深色背景 */
+    color: white; /* 白色字体 */
+    text-align: center;
+  }
+  
+  .description {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .description h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #61dafb; /* React 蓝色 */
+  }
+  
+  .description p {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .description button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .description button:hover {
+    background-color: #21a1f1;
+  }
