@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; // 保持这个导入，因为你的全局样式还在
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// 删除所有与 next/font 相关的导入，例如：
+// import { Geist, GeistMono } from 'next/font/google'; // 删除这一行！
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// 删除所有与 next/font 字体初始化相关的代码，例如：
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({ // 注意，你这里写的是 Geist_Mono，如果之前就是这样，也一并删除
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      {/* 移除 className 属性中对 geistSans.variable 和 geistMono.variable 的引用 */}
+      {/* 字体现在通过 globals.css 中的 body 标签的 font-family 属性应用 */}
+      <body className="antialiased"> {/* 保持 antialiased 如果你需要 */}
         {children}
       </body>
     </html>

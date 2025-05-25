@@ -1,7 +1,7 @@
 'use client'; // <-- 声明为客户端组件
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import styles from './page.module.css'; // 假设 Next.js 默认的样式文件
 
 export default function Home() {

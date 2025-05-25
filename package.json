@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export",
+    "build": "next build",
     "electron:dev": "cross-env IS_DEV=true concurrently \"npm run dev\" \"npm run electron-start\"",
     "electron-start": "wait-on http://localhost:3000 && electron .",
     "electron:build": "npm run build && electron-builder",
@@ -36,6 +36,7 @@
   },
   "build": {
     "appId": "com.yourcompany.electronnextapp",
+    "compression": "maximum", 
     "files": [
       "out/**/*",
       "electron/**/*"
