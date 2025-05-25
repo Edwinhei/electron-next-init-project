@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 忽略 assets 文件夹内的所有内容
+assets/*
+
+# 但是不忽略 .gitkeep 文件，以便 Git 跟踪 assets 文件夹本身
+!assets/.gitkeep
